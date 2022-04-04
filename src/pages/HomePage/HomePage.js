@@ -1,15 +1,12 @@
+
 import React from 'react';
-import PropTypes from 'prop-types';
-import './HomePage.scss';
+import Header from "../../components/Header/Header";
 
-const HomePage = () => (
-  <div className="HomePage">
-    HomePage Component
+
+const HomePage = () => {
+  <div>
+    <Header/>
   </div>
-);
-
-HomePage.propTypes = {};
-
-HomePage.defaultProps = {};
-
-export default HomePage;
+  }
+  
+  export default HomePage;
