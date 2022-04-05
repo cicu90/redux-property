@@ -39,7 +39,9 @@ const Header = () => {
         < TabMenu model = { items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}/>
       </div>
       <div className="col-2">
-      <Button label="Primary" className="p-button-rounded" />
+      <Button label="Register" className="p-button-rounded p-button-secondary" />
+      <Button label="Login" className="p-button-rounded" />
+
       </div>
     </nav>
   );
