@@ -1,15 +1,13 @@
-
 import React from 'react';
-import Header from "../../components/Header/Header";
-import DashboardProducts from '../DashboardProducts/DashboardProducts';
-
+import HappyHouse from "../../components/HappyHouse/HappyHouse"
 
 const HomePage = () => {
+  
+  return(
   <div>
-    <Header/>
-    <p>Home Page</p>
-    <DashboardProducts/>
+    <HappyHouse/>
   </div>
+  )
   }
 
   export default HomePage;
