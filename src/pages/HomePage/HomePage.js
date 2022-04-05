@@ -1,12 +1,13 @@
-
 import React from 'react';
-import Header from "../../components/Header/Header";
-
+import HappyHouse from "../../components/HappyHouse/HappyHouse"
 
 const HomePage = () => {
+  
+  return(
   <div>
-    <Header/>
+    <HappyHouse/>
   </div>
+  )
   }
   
   export default HomePage;
