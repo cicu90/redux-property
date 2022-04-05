@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { TabMenu } from 'primereact/tabmenu';
 import { Button } from 'primereact/button';
 import logo from "../../images/logo.png";
-// import './Header.scss';
+import './Header.scss';
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(3);
@@ -31,11 +31,17 @@ const Header = () => {
   ];
 
   return (
-    <div>
-      <img alt="" src={logo}/>
-      < TabMenu model = { items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}/>
+    <nav className="grid">
+      <div className="col-2">
+        <img className="logo" alt="" src={logo}/>
+      </div>
+      <div className="col">
+        < TabMenu model = { items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}/>
+      </div>
+      <div className="col-2">
       <Button label="Primary" className="p-button-rounded" />
-    </div>
+      </div>
+    </nav>
   );
 }
 

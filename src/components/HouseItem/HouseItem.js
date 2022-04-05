@@ -1,24 +1,23 @@
-import React from "react";
-import HouseItem from "../../components/HouseItem/HouseItem";
-// import './DashboardProducts.scss';
+import React from 'react';
+import './HouseItem.scss';
 
+import logo from "../../images/logo.png"; //imagen provisional
 
+const HouseItem = () => {
 
-const DashboardProducts = () => {
-
-    return(
-        <div>
-            <div className="grid">
+  return (
+      <div className="HouseItem">
+        <article className="grid">
                 <div className="col-3">
-                    <p>Image</p>
+                    <img alt="" src={logo} />
                 </div>
-                <div className="col-3">
+                <div className="col-4">
                     <p>Adress</p>
                 </div>
                 <div className="col-1">
                     <p>Price</p>
                 </div>
-                <div className="col-3">
+                <div className="col-2">
                     <p>Cararteristics</p>
                 </div>
                 <div className="col-1">
@@ -27,10 +26,10 @@ const DashboardProducts = () => {
                 <div className="col-1">
                     <p>Remove</p>
                 </div>
-            </div>
-            <HouseItem/>
-        </div>
+            </article>
+      </div>
     )
 };
 
-export default DashboardProducts;
+
+export default HouseItem;
