@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
-// import './HappyHouse.scss';
+import { InputText } from 'primereact/inputtext';
+import './HappyHouse.scss';
 // import Button from "../Button/Button";
 
   function HappyHouse() {
     const [city, setcity] = useState('');
-    const handleChangeInput = ({ target }) => {
-    setcity(target.value)
-  };
+
 
   return (
     <div className="HappyHouse-container">
-      <h2>Here You will find THE best deals on your favorite houses</h2>
-      <p>What are you waiting for? </p>
-      <p>Click below and search for your dream house</p>
-      <input className="form-control mt-2"
-        type="text"
-        placeholder="Enter city"
-        onChange={handleChangeInput}
-      />
+        <h2>Here You will find your favorite houses</h2>
+        <p>What are you waiting for? </p>
+        <p>Click below and search for your dream house</p>
+        <span className="p-float-label">
+                    <InputText id="Enter city"  value={city} onChange={(e) => setcity(e.target.value)} />
+                    <label htmlFor="Enter city">Enter city</label>
+                </span>
       <div className="HappyHouse-btns">
         {/* <Button
           className="btns"
@@ -27,6 +25,11 @@ import React, { useState } from 'react';
         >
           SEARCH
         </Button> */}
+      </div>
+      <div className="PopularList">
+        <h2>Popular Listings</h2>
+        <p>BUY</p>
+
       </div>
     </div>
   );
