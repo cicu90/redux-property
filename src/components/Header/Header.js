@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { TabMenu } from 'primereact/tabmenu';
 import './Header.scss';
