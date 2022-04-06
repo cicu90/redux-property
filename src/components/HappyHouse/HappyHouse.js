@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
+import HouseCarousel from '../HouseCarousel/HouseCarousel';
 import './HappyHouse.scss';
-// import Button from "../Button/Button";
 
   function HappyHouse() {
     const [city, setcity] = useState('');
-
+    
 
   return (
     <div className="HappyHouse-container">
@@ -26,10 +26,12 @@ import './HappyHouse.scss';
           SEARCH
         </Button> */}
       </div>
-      <div className="PopularList">
-        <h2>Popular Listings</h2>
-        <p>BUY</p>
-
+      <div className="grid carousel-container">
+        <div className="PopularList col-6">
+          <h2>Popular Listings</h2>
+          <p>BUY</p>
+          <HouseCarousel/>
+        </div>
       </div>
     </div>
   );
