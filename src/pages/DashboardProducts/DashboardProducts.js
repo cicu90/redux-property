@@ -1,21 +1,21 @@
 import React from "react";
 import HouseItem from "../../components/HouseItem/HouseItem";
-// import './DashboardProducts.scss';
+import './DashboardProducts.scss';
 
 
 
 const DashboardProducts = () => {
 
     return(
-        <div>
-            <div className="grid">
-                <div className="col-3">
+        <div className="dashboardBody">
+            <div className="grid titles">
+                <div className="col-2">
                     <p>Image</p>
                 </div>
                 <div className="col-3">
                     <p>Adress</p>
                 </div>
-                <div className="col-1">
+                <div className="col-2">
                     <p>Price</p>
                 </div>
                 <div className="col-3">
