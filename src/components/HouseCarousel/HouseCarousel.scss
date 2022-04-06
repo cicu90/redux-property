@@ -1,0 +1,23 @@
+.HouseCarousel {
+.product-item .product-item-content {
+  height: 98%;
+  border: 1px solid var(--surface-d);
+  border-radius: 3px;
+  margin: .3rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.product-item{
+  height: 98%;
+}
+.product-item .img-carousel {
+  height: 100%;
+  width: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.img-carousel{
+  width:40%;
+  height:50%;
+}
+}
