@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
 import HouseCarousel from '../HouseCarousel/HouseCarousel';
 import './HappyHouse.scss';
+import { useDispatch } from 'react-redux';
+import { simpleSearch } from '../../redux/properties/actions'
+
 
   function HappyHouse() {
+  const navigate = useNavigate();
     const [city, setcity] = useState('');
-    
+    const dispatch = useDispatch()
+    const searchAction = () => {
+      dispatch(simpleSearch(city))
+      navigate('/dashboard')
+    }
 
   return (
     <div className="HappyHouse-container">
@@ -17,14 +27,7 @@ import './HappyHouse.scss';
                     <label htmlFor="Enter city">Enter city</label>
                 </span>
       <div className="HappyHouse-btns">
-        {/* <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-          city={city}
-        >
-          SEARCH
-        </Button> */}
+      <Button icon="pi pi-search" className="p-button-rounded p-button-success p-button-text" onClick={() => searchAction()}/>
       </div>
       <div className="grid carousel-container">
         <div className="PopularList col-6">

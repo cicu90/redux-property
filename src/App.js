@@ -10,6 +10,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 import "/node_modules/primeflex/primeflex.css"; //primeflex
+import Provider from './redux/Provider';
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
 
   return (
+  <Provider>
     <BrowserRouter>
       <Header />
         <Routes>
@@ -24,7 +26,7 @@ function App() {
           <Route path="/dashboard" element={<DashboardProducts/>}/>
         </Routes>
     </BrowserRouter>
-
+  </Provider>
   );
 }
 
