@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Formik, Field, Form } from 'formik';
+import Range from '../Range/Range';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import fontawesome
+import { solid} from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import fontawesome
 
 import './SearchForm.scss';
 
@@ -68,7 +69,12 @@ const SearchForm = () => {
         </label>
         <label className='col'>
           <p>Equipment</p>
-          <Field name="Equipment" type="text"/>
+          <select name="Equipment">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
         </label>
         </div>
         <div className='grid'>
@@ -86,11 +92,15 @@ const SearchForm = () => {
           </label>
           <label className='col'>
             <p>Price Range</p>
-          <Field name="PriceRange" type="text" value="price"/>
+          <Range/>
           </label>
           <label className='col'>
             <p>Publication Date</p>
-            <Field name="PublicationDate" type="text" value="date"/>
+            <select name="PublicationDate">
+            <option value="48h">Last 48 hours</option>
+            <option value="week">Last week</option>
+            <option value="month">Last month</option>
+          </select>
           </label>
           <label className='col'>
             <p>More filters</p>
