@@ -1,5 +1,10 @@
 import React from "react";
+
+
 import HouseItem from "../../components/HouseItem/HouseItem";
+import SearchForm from "../../components/SearchForm/SearchForm";
+
+
 import './DashboardProducts.scss';
 
 
@@ -8,6 +13,7 @@ const DashboardProducts = () => {
 
     return(
         <div className="dashboardBody">
+            <SearchForm/>
             <div className="grid titles">
                 <div className="col-2">
                     <p>Image</p>

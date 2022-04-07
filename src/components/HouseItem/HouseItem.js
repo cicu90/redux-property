@@ -4,12 +4,12 @@ import './HouseItem.scss';
 import logo from "../../images/logo.png"; //imagen provisional
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import fontawesome
 
 const HouseItem = () => {
 
-  return (
-      <div className="HouseItem">
+return (
+    <div className="HouseItem">
         <article className="grid">
                 <div className="col-2">
                     <img alt="" src={logo} />
@@ -23,9 +23,9 @@ const HouseItem = () => {
                 </div>
                 <div className="col-3">
                     <p>
-                      <FontAwesomeIcon icon={solid('bed')} /> 2 |
-                      <FontAwesomeIcon icon={solid('toilet')} /> 1 |
-                      <FontAwesomeIcon icon={regular('square')} /> 105m<sup>2</sup>
+                        <FontAwesomeIcon icon={solid('bed')} /> 2 |
+                        <FontAwesomeIcon icon={solid('toilet')} /> 1 |
+                        <FontAwesomeIcon icon={regular('square')} /> 105m<sup>2</sup>
                     </p>
                 </div>
                 <div className="col-1">
@@ -35,7 +35,7 @@ const HouseItem = () => {
                     <i className="pi pi-trash"/>
                 </div>
             </article>
-      </div>
+    </div>
     )
 };
 
