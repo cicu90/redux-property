@@ -1,5 +1,5 @@
 import React from "react";
-
+import {useSelector} from "react-redux"
 
 import HouseItem from "../../components/HouseItem/HouseItem";
 import SearchForm from "../../components/SearchForm/SearchForm";
@@ -10,6 +10,7 @@ import './DashboardProducts.scss';
 
 
 const DashboardProducts = () => {
+    const properties = useSelector((state) => state.properties)
 
     return(
         <div className="dashboardBody">
@@ -34,7 +35,7 @@ const DashboardProducts = () => {
                     <p>Remove</p>
                 </div>
             </div>
-            <HouseItem/>
+            {properties.map((property) => <HouseItem property={property}/>)}
         </div>
     )
 };

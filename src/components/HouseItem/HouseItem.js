@@ -6,26 +6,26 @@ import logo from "../../images/logo.png"; //imagen provisional
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import fontawesome
 
-const HouseItem = () => {
+const HouseItem = ({property}) => {
 
 return (
     <div className="HouseItem">
         <article className="grid">
                 <div className="col-2">
-                    <img alt="" src={logo} />
+                    <img alt="" src={property.image} />
                 </div>
                 <div className="col-3">
-                    <p className="bold">C/ La Sabinita, Prueba, nº16</p>
-                    <p>38500, Tenerife, España</p>
+                    <p className="bold">{property.street}</p>
+                    <p>{property.country}</p>
                 </div>
                 <div className="col-2">
-                    <p>450,000</p>
+                    <p>{property.price}</p>
                 </div>
                 <div className="col-3">
                     <p>
-                        <FontAwesomeIcon icon={solid('bed')} /> 2 |
-                        <FontAwesomeIcon icon={solid('toilet')} /> 1 |
-                        <FontAwesomeIcon icon={regular('square')} /> 105m<sup>2</sup>
+                        <FontAwesomeIcon icon={solid('bed')} /> {property.room} |
+                        <FontAwesomeIcon icon={solid('toilet')} /> {property.bath} |
+                        <FontAwesomeIcon icon={regular('square')} /> {property.size}m<sup>2</sup>
                     </p>
                 </div>
                 <div className="col-1">
